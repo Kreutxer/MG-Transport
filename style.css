@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Cabin:wght@700&family=Fira+Sans+Condensed:wght@300;700&family=Josefin+Sans:wght@700&family=Lexend+Deca:wght@300&family=Manrope:wght@800&family=Montserrat:wght@100;800&family=Poppins:wght@100;200;300&family=Red+Hat+Display:ital,wght@1,900&family=Roboto+Slab:wght@300&family=Roboto:wght@300;400;500;900&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+div{
+    display: block;
+}
+.background {
+    display: flex;
+    background: #FBCA01;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-size: contain;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container {
+    background-color: white;
+    border-radius: 7px;
+    width: 560px;
+    height: 900px;
+    margin: 60px auto;
+    justify-content: center;
+}
+
+.image-box{
+    background-image: url(./images/MGLogo.jpg);
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+    margin: 50px auto;
+}
+
+.login-box{
+    width: 100%;
+    height: 50px;
+    text-align: center;
+}
+
+/* .login-text{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+    font-size: 30px;
+    color: aliceblue;
+} */
+
+.input-container {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .input-field {
+    width: 100%;
+    height: 30px;
+    padding: 10px;
+    outline: 2px solid #FBCA01;
+    background-color: #fbc9011f;
+    margin: 2px 50px;
+    border-radius: 5px;
+    border-color: transparent;
+    font-size: 20px;
+    font-family:'Roboto', sans-serif;
+    font-weight: medium;
+
+  }
+
+  .btn{
+    width: 82%;
+    height: 50px;
+    background-color: #FBCA01;
+    border-color: transparent;
+    border-radius: 3px;
+    margin: 50px auto;
+  }
+
+  .btn:hover{
+    width: 82%;
+    height: 50px;
+    border-color: transparent;
+    border-radius: 3px;
+    margin: 50px auto;
+    box-shadow: 0 0 11px rgba(33, 33, 33, 0.534); 
+
+  }
+
+  h3{
+    font-size: 20px;
+    font-family:'Roboto', sans-serif;
+    font-weight: bold;
+    color:#43423d
+  }
+
+  .nav {
+    display: flex;
+    width: 100%;
+    height: 70px;
+    justify-content: space-between;
+    background-color: #FFC900;
+  }
+
+  .logo {
+    background-image: url(./images/MGLogoLong.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 350px;
+    left: 0;
+  }
+
+  /* h1 {
+    margin-right: 100px;
+  } */
+
+  .empty {
+    width: 200px;
+  }
+
+  .list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .wrap {
+    display: flex;
+    width: 180px;
+    text-decoration: none;
+    height: 70px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .wrap:hover {
+    background-color: aliceblue;
+    box-shadow: 0 0 11px rgba(33, 33, 33, 0.534); 
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .banner {
+    width: 100%;
+    height: 400px;
+    background-image: url(./images/trucksss.png);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .text-banner {
+    background-image: linear-gradient(rgba(255, 255, 255, 0),rgba(0, 0, 0, 0.485));
+    width: 100%;
+    height: 200px;
+    margin-top: 200px;
+  }
+
+  .divider {
+    width: 100%;
+    height: 50px;
+    background-color: #FBCA01;
+    box-shadow: 0 0 11px rgba(33, 33, 33, 0.534); 
+  }
+
+  .body-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 700px;
+    height: 100px;
+    font-family: 'Cabin', sans-serif;
+    font-size: 40px;
+  }
+
+  .content-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+  }
+
+  .left {
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    height: auto;
+    background-color: antiquewhite;
+  }
+
+  .mid {
+    width: 900px;
+    height: auto;
+    background-color:azure;
+  }
+
+  .right {
+    width: 200px;
+    height: 100px;
+    background-color: antiquewhite;
+  }
+
+  .left-list {
+    width: 180px;
+    height: 200px;
+    background-color: aqua;
+  }
+
+  .footer {
+    background-color: #FBCA01;
+    width: 100%;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .zxc {
+    width: 100%;
+    height: 70px;
+  }
+
+  .mid-content {
+    width: 900px;
+    height: auto;
+  }
+
+  .foot-wrapper {
+    justify-content:space-around;
+    align-items: center;
+    display: flex;
+    width: 1400px;
+    height: 180px;
+  }
+
+  .contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 400px;
+    height: 200px;
+  }
+
+  .contain {
+    display: flex;
+    align-items: center;
+    width: 400px;
+    height: 40px;
+  }
+
+  .company {
+    width: 400px;
+    height: 200px;
+  }
+
+  .icon-address {
+    background-image: url(./images/place.png);
+    background-size: contain;
+    width: 40px;
+    height: 40px;
+  }
+
+  .icon-phone {
+    background-image: url(./images/phone.png);
+    background-size: contain;
+    width: 40px;
+    height: 40px;
+  }
+
+  .t {
+    width: 300px;
+    height: 40px;
+    display: flex;
+    margin-left: 20px;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .icon-email {
+    background-image: url(./images/email.png);
+    background-size: contain;
+    width: 40px;
+    height: 40px;
+  }
