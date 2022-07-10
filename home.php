@@ -22,13 +22,13 @@ include "koneksi.php";
         <div class="empty"></div>
         <div class="list">
             <div class="wrap">
-                <a href="">Driver</a>
+                <a href="driver.php">Drivers</a>
             </div>
             <div class="wrap">
                 <a href="">Trucks</a>
             </div>
             <div class="wrap">
-                <a href="">Customer</a>
+                <a href="">Customers</a>
             </div>
         </div>
         <div class="blank"></div>
@@ -75,7 +75,6 @@ include "koneksi.php";
             </div>
         </div>
     </div>
-    <div class="zxc"></div>
     <div class="footer">
         <div class="foot-wrapper">
             <div class="contact">

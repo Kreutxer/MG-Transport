@@ -141,9 +141,18 @@ div{
     justify-content: center;
   }
 
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: 70px;
+  }
+
   .wrap:hover {
     background-color: aliceblue;
     box-shadow: 0 0 11px rgba(33, 33, 33, 0.534); 
+    cursor: pointer;
   }
 
   a {
@@ -184,6 +193,7 @@ div{
     height: auto;
     justify-content: center;
     align-items: center;
+    background-color: #F5F0BB;
   }
 
   .head {
@@ -208,25 +218,21 @@ div{
     justify-content: center;
     width: 200px;
     height: auto;
-    background-color: antiquewhite;
   }
 
   .mid {
     width: 900px;
     height: auto;
-    background-color:azure;
   }
 
   .right {
     width: 200px;
     height: 100px;
-    background-color: antiquewhite;
   }
 
   .left-list {
     width: 180px;
     height: 200px;
-    background-color: aqua;
   }
 
   .footer {
@@ -236,6 +242,7 @@ div{
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 0 0 11px rgba(33, 33, 33, 0.534); ;
   }
 
   .zxc {
@@ -246,6 +253,7 @@ div{
   .mid-content {
     width: 900px;
     height: auto;
+    min-height: 1000px;
   }
 
   .foot-wrapper {
@@ -305,3 +313,64 @@ div{
     width: 40px;
     height: 40px;
   }
+
+  .table-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    background-color: #F5F0BB;
+    min-height: 1000px;
+  }
+
+  .driver-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  table {
+    font-family: 'Lexend Deca', sans-serif;
+    border-collapse: collapse;
+  }
+
+  th {
+    text-align: left;
+    height: 50px;
+    background-color: #FBCA01;
+    padding-left: 10px;
+
+  }
+
+  #id {
+    width: 80px;
+  }
+
+  #name {
+    width: 250px;
+  }
+
+  #gender {
+    width: 150px;
+  }
+
+  #phone {
+    width: 150px;
+  }
+
+  #address {
+    width: 350px;
+  }
+
+  td {
+    height: 40px;
+    padding-left: 10px;
+  }
+
+  tr:hover {
+    background-color: #F8F9D7;
+  }
+

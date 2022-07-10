@@ -8,3 +8,4 @@ $db='db_truck';
 $db = mysqli_connect('localhost:3080', $user, $pass,$db);
 
 ?>
+
