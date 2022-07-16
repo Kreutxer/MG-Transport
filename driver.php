@@ -21,10 +21,10 @@
                 <a href="home.php">Home</a>
             </div>
             <div class="wrap">
-                <a href="">Trucks</a>
+                <a href="trucks.php">Trucks</a>
             </div>
             <div class="wrap">
-                <a href="">Customers</a>
+                <a href="cargo.php">Cargo</a>
             </div>
         </div>
         <div class="blank"></div>
@@ -32,6 +32,28 @@
     <div class="table-container">
         <div class="driver-title">
             <h1>Drivers</h1>
+        </div>
+        <div class="table-nav">
+            <div class="add">
+                <a href="tambah-driver.php" id="a-add">
+                    Add +
+                </a>
+            </div>
+            <div class="search">
+                <form action="driver.php" method="get">
+                    <input type="text" name="cari" id="inp-search"> 
+                </form>
+                <?php 
+                    if(isset($_GET['cari'])){
+                    	$cari = $_GET['cari'];
+                    	echo "<b>Hasil pencarian : ".$cari."</b>";
+                    }
+                    ?>
+                <div class="search-image">
+                        <a href="cari-driver.php" id="search-img"></a>
+
+                </div>
+            </div>
         </div>
         <div class="table-content">
             <table>
@@ -41,6 +63,7 @@
                     <th id="gender">Gender</th>
                     <th id="phone">Phone Number</th>
                     <th id="address">Address</th>
+                    <th id="act"></th>
                 </tr>
                 <?php
                     $no=1;
@@ -53,6 +76,14 @@
                         <td><?= $data['jenis_kelamin'] ?></td>
                         <td><?= $data['no_telp'] ?></td>
                         <td><?= $data['alamat'] ?></td>
+                        <td class="action">
+                            <a id="tbl" href="hapus.php?id_driver=<?php echo $data['id_driver']?>">
+                                <div class="hapus"></div>
+                            </a>
+                            <a id="tbl" href="edit-driver.php?id_driver=<?php echo $data['id_driver']?>">
+                                <div class="edit"></div>
+                            </a>
+                        </td>
                     </tr>
                     <?php
                     endwhile;

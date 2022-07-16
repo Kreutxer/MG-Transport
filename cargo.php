@@ -21,10 +21,10 @@
                 <a href="driver.php">Drivers</a>
             </div>
             <div class="wrap">
-                <a href="home.php">Home</a>
+                <a href="trucks.php">Trucks</a>
             </div>
             <div class="wrap">
-                <a href="cargo.php">Cargo</a>
+                <a href="home.php">Home</a>
             </div>
         </div>
         <div class="blank"></div>
@@ -35,41 +35,48 @@
         </div>
         <div class="table-nav">
             <div class="add">
-                <a href="tambah-truck.php" id="a-add">
+                <a href="tambah-cargo.php" id="a-add">
                     Add +
                 </a>
             </div>
             <div class="search">
-                <input type="text" name="cari" id="inp-search" placeholder="cari">
+                <form action="cari-cargo.php" method="get">
+                    <input type="text" name="cari" id="inp-search"> 
+                </form>
+                <?php 
+                    if(isset($_GET['cari'])){
+                    	$cari = $_GET['cari'];
+                    	echo "<b>Hasil pencarian : ".$cari."</b>";
+                    }
+                    ?>
                 <div class="search-image">
-                    <form action="truck.php" method="get">
-                        <a href="cari-truck.php" id="search-img"></a>
-                    </form>
+                        <a href="cari-cargo.php" id="search-img"></a>
+
                 </div>
             </div>
         </div>
         <div class="table-content">
             <table>
                 <tr>
-                    <th id="id">Code</th>
-                    <th id="name">Truck Name</th>
-                    <th id="gender">Max GVW</th>
+                    <th id="id">Cargo ID</th>
+                    <th id="name">Cargo Type</th>
+                    <th id="gender">Price/Truck</th>
                     <th id="act-trucks"></th>
                 </tr>
                 <?php
                     $no=1;
-                    $query=mysqli_query($db, 'SELECT * FROM t_truck');
+                    $query=mysqli_query($db, 'SELECT * FROM t_muatan');
                     while($data = mysqli_fetch_array($query)):
                     ?>
                     <tr>
-                        <td><?= $data['kode_truck'] ?></td>
-                        <td><?= $data['nama_truck'] ?></td>
-                        <td><?= $data['max_GVW'] ?></td>
+                        <td><?= $data['id_muatan'] ?></td>
+                        <td><?= $data['jenis_muatan'] ?></td>
+                        <td><?= $data['harga_per_truck'] ?></td>
                         <td class="act-img">
-                            <a id= "tbl" href="hapus-truck.php?kode_truck=<?php echo $data['kode_truck']?>">
+                            <a id= "tbl" href="hapus-cargo.php?id_muatan=<?php echo $data['id_muatan']?>">
                                 <div class="hapus"></div>
                             </a>
-                            <a id="tbl" href="edit-truck.php?kode_truck=<?php echo $data['kode_truck']?>">
+                            <a id="tbl" href="edit-cargo.php?id_muatan=<?php echo $data['id_muatan']?>">
                                 <div class="edit"></div>
                             </a>
                         </td>

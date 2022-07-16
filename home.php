@@ -25,13 +25,13 @@ include "koneksi.php";
                 <a href="driver.php">Drivers</a>
             </div>
             <div class="wrap">
-                <a href="">Trucks</a>
+                <a href="trucks.php">Trucks</a>
             </div>
             <div class="wrap">
-                <a href="">Customers</a>
+                <a href="cargo.php">Cargo</a>
             </div>
         </div>
-        <div class="blank"></div>
+        <div class="blank"><a href="logout.php">Log out</a></div>
     </div>
     <div class="banner">
         <div class="text-banner"></div>
@@ -93,7 +93,7 @@ include "koneksi.php";
             </div>
             <div class="company">
                 <div class="company-name">
-
+                    
                 </div>
             </div>
         </div>

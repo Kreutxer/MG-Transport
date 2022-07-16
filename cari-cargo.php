@@ -18,10 +18,10 @@
         <div class="empty"></div>
         <div class="list">
             <div class="wrap">
-                <a href="driver.php">Drivers</a>
+                <a href="home.php">Home</a>
             </div>
             <div class="wrap">
-                <a href="home.php">Home</a>
+                <a href="trucks.php">Trucks</a>
             </div>
             <div class="wrap">
                 <a href="cargo.php">Cargo</a>
@@ -35,48 +35,35 @@
         </div>
         <div class="table-nav">
             <div class="add">
-                <a href="tambah-truck.php" id="a-add">
+                <a href="tambah-driver.php" id="a-add">
                     Add +
                 </a>
-            </div>
-            <div class="search">
-                <input type="text" name="cari" id="inp-search" placeholder="cari">
-                <div class="search-image">
-                    <form action="truck.php" method="get">
-                        <a href="cari-truck.php" id="search-img"></a>
-                    </form>
-                </div>
             </div>
         </div>
         <div class="table-content">
             <table>
                 <tr>
-                    <th id="id">Code</th>
-                    <th id="name">Truck Name</th>
-                    <th id="gender">Max GVW</th>
-                    <th id="act-trucks"></th>
+                    <th id="id">ID</th>
+                    <th id="name">Name</th>
+                    <th id="gender">Gender</th>
+                    <th id="act"></th>
                 </tr>
                 <?php
-                    $no=1;
-                    $query=mysqli_query($db, 'SELECT * FROM t_truck');
-                    while($data = mysqli_fetch_array($query)):
+                    if(isset($_GET['cari'])){
+                        $cari = $_GET['cari'];
+                        $data = mysqli_query($db, "SELECT * FROM t_muatan WHERE jenis_muatan LIKE '%".$cari."%'");
+                    }else{
+                        $data = mysqli_query($db, "SELECT * FROM t_muatan");		
+                    }
+                    while($d = mysqli_fetch_array($data)){
                     ?>
                     <tr>
-                        <td><?= $data['kode_truck'] ?></td>
-                        <td><?= $data['nama_truck'] ?></td>
-                        <td><?= $data['max_GVW'] ?></td>
-                        <td class="act-img">
-                            <a id= "tbl" href="hapus-truck.php?kode_truck=<?php echo $data['kode_truck']?>">
-                                <div class="hapus"></div>
-                            </a>
-                            <a id="tbl" href="edit-truck.php?kode_truck=<?php echo $data['kode_truck']?>">
-                                <div class="edit"></div>
-                            </a>
-                        </td>
-                        
-                    </tr>
-                    <?php
-                    endwhile;
+                        <td><?php echo $d['id_muatan']; ?></td>
+                        <td><?php echo $d['jenis_muatan']; ?></td>
+                        <td><?php echo $d['harga_per_truck']; ?></td>
+		                <!-- <td><?php echo $data['nama_driver']; ?></td> -->
+	                </tr>
+                    <?php }
                 ?>
             </table>
         </div>
